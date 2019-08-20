@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_19_132309) do
+ActiveRecord::Schema.define(version: 2019_08_20_085705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +26,14 @@ ActiveRecord::Schema.define(version: 2019_08_19_132309) do
     t.float "avarage_rating"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "length"
+    t.text "description"
+    t.integer "room_number"
+    t.integer "sleep_number"
+    t.integer "bathroom_number"
+    t.integer "deck_number"
+    t.integer "gallons_per_hour"
+    t.string "photo"
     t.index ["user_id"], name: "index_boats_on_user_id"
   end
 
