@@ -1,9 +1,22 @@
 
-<!-- show photos of the boat (one in focus) -->
+
 <h1><%= @boat.name %></h1>
 <div>
   <ul>
-    <li>@boat.location</li>
+    <li>Location: <%= @boat.location %></li>
+    <li>Description: <%= @boat.description%></li>
+    <li>Capacity up to: <%= @boat.capacity %> pers</li>
+    <li>Sleeps: <%= @boat.sleep_number %> pers</li>
+
+    <li>Rooms: <%= @boat.room_number %></li>
+    <li>Bathrooms: <%= @boat.bathroom_number %></li>
+    <li>Decks: <%= @boat.deck_number%></li>
+    <li>Gallons/hour: <%= @boat.gallons_per_hour%></li>
+
+    <li>Price per day: <%= @boat.price %>€</li>
+    <li>Avarage Rating: <%= @boat.avarage_rating %> stars</li>
+    <li>Length: <%= @boat.length %>m </li>
+
   </ul>
 </div>
 
