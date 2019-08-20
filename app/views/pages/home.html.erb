@@ -1,6 +1,26 @@
 <div class="banner">
 <h1>Float Your Boat</h1>
+
+<div class="container">
+  <ul>
+<%= form_tag(boats_path, method: :get) do %>
+  <%= text_field_tag :location, nil, placeholder: 'Where to float your boat?' %>
+  <%= text_field_tag :type, nil, placeholder: 'What type of boat?' %>
+  <%= text_field_tag :capacity, nil, placeholder: 'How many people?' %>
+  <%= text_field_tag :date, nil, placeholder: 'When?' %>
+  <%= submit_tag 'Search', class: "btn btn-primary" %>
+<% end %>
+</ul>
 </div>
 
-<%= link_to 'Login', '/user/sign_up', class: "btn btn-primary" %>
-<%= link_to 'Sign in', '/user/sign_in', class: "btn btn-primary" %>
+</div>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+      <%= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %>
+    </div>
+  </div>
+</div>
+
