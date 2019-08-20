@@ -1,9 +1,12 @@
-<div class="container">
-  <h1>Boats</h1>
+<h2>Available Boats:</h2>
 
-  <% @boats.each do |boat| %>
-    <h2><%= link_to boat.name, boats_path(boat)%></h2>
-
-  <% end %>
-  <%= link_to "Back to Homepage", root_path %>
+<% @boats.each do |boat| %>
+<div class='boat-card'>
+  <h3><%=boat.name%></h3>
+  <p>Location: <%=boat.location%></p>
+  <p>Price per day: <%=boat.price%> $</p>
+  <p>Capacity: <%=boat.capacity%> • Length: <%=boat.length%>m • Rooms: <%=boat.room_number%> • Sleeps: <%=boat.sleep_number%> • Bathrooms: <%=boat.bathroom_number%> • Decks: <%=boat.deck_number%> • Gallons per Hour: <%=boat.gallons_per_hour%> </p>
+  <p>Owner: <%=boat.user.name%></p>
 </div>
+<% end %>
+
