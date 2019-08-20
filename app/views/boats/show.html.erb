@@ -4,23 +4,32 @@
 <div class="boat-card">
   <ul>
     <p>Location: <%= @boat.location %></p>
-    <p>Description: <%= @boat.description%></p>
     <p>Capacity up to: <%= @boat.capacity %> pers</p>
     <p>Sleeps: <%= @boat.sleep_number %> pers</p>
-
     <p>Rooms: <%= @boat.room_number %></p>
     <p>Bathrooms: <%= @boat.bathroom_number %></p>
     <p>Decks: <%= @boat.deck_number%></p>
     <p>Gallons/hour: <%= @boat.gallons_per_hour%></p>
-
     <p>Price per day: <%= @boat.price %>€</p>
     <p>Avarage Rating: <%= @boat.avarage_rating %> stars</p>
     <p>Length: <%= @boat.length %>m </p>
+    <p>Description: <%= @boat.description%></p>
 
   </ul>
 
-<p><%= link_to "Back",  boats_path, class: 'btn'%></p>
+<p><%= link_to "Back",  boats_path, class: 'btn'%><%= link_to "Back",  boats_path, class: 'btn'%></p>
 </div>
+
+<%= simple_form_for([@boat, @booking]) do |f| %>
+<div class="form-inline">
+  <%= f.input :pickup_date, as: :string, label: "Start", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+  <%= f.input :return_date, as: :string, label: "End", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+</div>
+<br>
+<%= f.button :submit, "Book #{@boat.name}", class: "btn text-center", id: "booking_submit"%>
+<% end %>
+
+<!-- display price per day x days = Total-->
 
 
 
