@@ -1,8 +1,13 @@
 // Import page-specific CSS files here.
 @import "home";
 
+body{
+  // background-image: url("https://images.unsplash.com/photo-1487615215796-62477c922fa5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=967&q=80");
+  background: #5588a3;
+}
+
 .boat-card{
-  width: 800px;
+  width: 900px;
   background: white;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   margin: 60px auto;
@@ -11,14 +16,34 @@
   border-radius: 2px;
   overflow: hidden;
   display: flex;
+  // border: solid 4px #257aa6;
+  vertical-align: baseline;
+  line-height: 1;
 }
 
 .boat{
   margin: 10px;
+  margin-left: 20px;
+  line-height: 1.5;
+}
+
+.boat-info p{
+  margin: 0;
+}
+
+.info{
+  background: #c8d9eb;
+  width: 500px;
+  border: solid 2px #84a1be;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  padding: 5px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 .boat-card ul{
   list-style: none;
+  line-height: 1.5;
 }
 
 .boat-card li{
@@ -37,11 +62,23 @@ h2{
 }
 
 .btn{
-  text-decoration: none;
-  background: #A6E7FF;
   border-radius: 3px;
+  color: white;
+  background-color: #074684;
   padding: 5px;
   margin: 10px;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.action_list{
+  width: 600px;
+  padding: 0;
+  text-align: right;
+  margin-bottom: 0;
 }
 
