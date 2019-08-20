@@ -3,8 +3,9 @@
 <% @boats.each do |boat| %>
 <div class='boat-card'>
   <h3><%=boat.name%></h3>
-  <p>Locagtion: <%=boat.location%></p>
-  <p>Price per day: <%=boat.price%></p>
-  <p>Capacity: <%=boat.capacity%>, Length: <%=boat.length%>, Rooms: <%=boat.room_number%>, Sleeps: <%=boat.sleep_number%>, Bathrooms: <%=boat.bathroom_number%>, Decks: <%=boat.deck_number%>, Gallons per Hour: <%=boat.gallons_per_hour%> </p>
+  <p>Location: <%=boat.location%></p>
+  <p>Price per day: <%=boat.price%> $</p>
+  <p>Capacity: <%=boat.capacity%> • Length: <%=boat.length%>m • Rooms: <%=boat.room_number%> • Sleeps: <%=boat.sleep_number%> • Bathrooms: <%=boat.bathroom_number%> • Decks: <%=boat.deck_number%> • Gallons per Hour: <%=boat.gallons_per_hour%> </p>
+  <p>Owner: <%=boat.user.name%></p>
 </div>
 <% end %>
