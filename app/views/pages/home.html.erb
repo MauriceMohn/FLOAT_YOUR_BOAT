@@ -1,20 +1,31 @@
 <div id="landing-page" class="banner">
 <h1>Float Your Boat</h1>
 
-<div class="container">
-  <ul>
-<%= form_tag(boats_path, method: :get) do %>
-  <%= text_field_tag :location, nil, placeholder: 'Where to float your boat?' %>
-  <%= text_field_tag :type, nil, placeholder: 'What type of boat?' %>
-  <%= text_field_tag :capacity, nil, placeholder: 'How many people?' %>
-  <%= text_field_tag :date, nil, placeholder: 'When?' %>
-  <%= submit_tag 'Search', class: "btn btn-primary" %>
-<% end %>
-</ul>
-</div>
 
-</div>
 
+
+<div class="container-form">
+  <div class="row justify-content-center">
+    <div class="col-4 white-box-container">
+
+<%= simple_form_for :search, url: boats_path do |f| %>
+<%= f.input :location, placeholder: 'Where to float your boat?' %>
+<%= f.input :boat_type, collection: ['Sail Boat', 'Yacht', 'Speed Boat', 'Kayak', 'House Boat', 'Canoe'] %>
+ <%= f.input :sleep_number, placeholder: 'How many people?' %>
+ <div class="row">
+   <div class="col m-2">
+ <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+  <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+  </div>
+  </div>
+  <%= f.submit 'Search', class: "button-home" %>
+   <% end %>
+
+
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="container">
   <div class="row justify-content-center">
