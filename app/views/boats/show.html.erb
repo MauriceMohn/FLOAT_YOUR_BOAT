@@ -1,57 +1,58 @@
 
-<div class="flex-division">
-    <div class="div-info">
+<div class="container">
+  <div class="outter">
 
-    <div class="boat-card-two">
-    <h1><%= @boat.name %></h1>
-      <ul>
-        <p>Location: <%= @boat.location %></p>
-        <p>Capacity up to: <%= @boat.capacity %> pers</p>
-        <p>Sleeps: <%= @boat.sleep_number %> pers</p>
-        <p>Rooms: <%= @boat.room_number %></p>
-        <p>Bathrooms: <%= @boat.bathroom_number %></p>
-        <p>Decks: <%= @boat.deck_number%></p>
-        <p>Gallons/hour: <%= @boat.gallons_per_hour%></p>
-        <p>Price per day: <%= @boat.price %>€</p>
-        <p>Avarage Rating: <%= @boat.avarage_rating %> stars</p>
-        <p>Length: <%= @boat.length %>m </p>
-        <p>Description: <%= @boat.description%></p>
-      </ul>
+    <div id="inner-left">
 
-      <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
-    </div>
-    </div>
+      <div class="boat-card">
 
+        <ul>
+          <h1><%= @boat.name %></h1>
+          <p>Location: <strong><%= @boat.location %></strong></p>
+          <p>Capacity up to: <strong><%= @boat.capacity %> pers</strong></p>
+          <p>Sleeps: <strong><%= @boat.sleep_number %> pers</strong></p>
+          <p>Rooms: <strong><%= @boat.room_number %></strong></p>
+          <p>Bathrooms: <strong><%= @boat.bathroom_number %></strong></p>
+          <p>Decks: <strong><%= @boat.deck_number%></strong></p>
+          <p>Gallons/hour: <strong><%= @boat.gallons_per_hour%></strong></p>
+          <p>Price per day: <strong><%= @boat.price %>€</strong></p>
+          <p>Avarage Rating: <strong><%= @boat.avarage_rating %> stars</strong></p>
+          <p>Length: <strong><%= @boat.length %>m </strong></p>
+          <p>Description: <strong><%= @boat.description%></strong></p>
+        </ul>
 
-    <div class="div-form">
-
-    <div class="boat-card-two">
-      <h2>Book <%= @boat.name%></h2>
-      <%= simple_form_for([@boat, @booking]) do |f| %>
-      <div class="form-group">
-        <%= f.input :pickup_date, as: :string, label: "Start", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
-        <%= f.input :return_date, as: :string, label: "End", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
-
-       <div class="form-group">
-        <%= f.label :number_of_guests%>
-        <%= f.text_field :number_of_guests, class: 'form-control'%>
-       </div>
-
-      <br>
-      <%= f.button :submit, "Book now", class: "btn text-center", id: "booking_submit"%>
-      <% end %>
-      <br>
+        <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
+      </div>
     </div>
 
 
+    <div id="inner-right">
+
+      <div class="boat-card-two">
+        <h2>Book <%= @boat.name%></h2>
+        <%= simple_form_for([@boat, @booking]) do |f| %>
+        <div class="form-group">
+          <%= f.input :pickup_date, as: :string, label: "Start", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+          <%= f.input :return_date, as: :string, label: "End", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+
+          <div class="form-group">
+            <%= f.label :number_of_guests%>
+            <%= f.text_field :number_of_guests, class: 'form-control'%>
+          </div>
+
+          <br>
+          <%= f.button :submit, "Book now", class: "btn text-center", id: "booking_submit"%>
+          <% end %>
+          <br>
+        </div>
+
+
+      </div>
     </div>
+  </div>
+  <!-- display price per day x days = Total-->
 
 
-
-
-
-</div>
-<!-- display price per day x days = Total-->
 
 
 
