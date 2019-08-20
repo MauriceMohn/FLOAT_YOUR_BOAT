@@ -1,7 +1,7 @@
 
 
 <h1><%= @boat.name %></h1>
-<div>
+<div class="boat-card">
   <ul>
     <li>Location: <%= @boat.location %></li>
     <li>Description: <%= @boat.description%></li>
@@ -18,6 +18,8 @@
     <li>Length: <%= @boat.length %>m </li>
 
   </ul>
+
+<p><%= link_to "Back",  boats_path, class: 'btn'%></p>
 </div>
 
 
