@@ -1,1 +1,9 @@
-<h1>boat index</h1>
+<div class="container">
+  <h1>Boats</h1>
+
+  <% @boats.each do |boat| %>
+    <h2><%= link_to boat.name, boats_path(boat)%></h2>
+
+  <% end %>
+  <%= link_to "Back to Homepage", root_path %>
+</div>
