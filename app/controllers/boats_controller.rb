@@ -1,5 +1,6 @@
 class BoatsController < ApplicationController
   def index
+    raise
     @boats = Boat.all
   end
 
