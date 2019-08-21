@@ -1,4 +1,4 @@
-<h2><%= boat.name %></h2>
+<h2><%= link_to boat.name, boat_path(boat), class: 'link'%></h2>
 <p>Type: <%= boat.boat_type %></p>
 <p>Location: <%= boat.location %></p>
 <p>Price: <strong><%=boat.price%></strong> per day</p>
