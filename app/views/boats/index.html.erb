@@ -16,7 +16,7 @@
             <p>Type: <strong><%=boat.boat_type%></strong></p>
             <p>Pickup Location: <strong><%=boat.location%></strong></p>
             <p>Price per day: <strong><%=boat.price%> $</strong></p>
-            <div class="info"><p>Capacity: <%=boat.capacity%> • Length: <%=boat.length%>m • Rooms: <%=boat.room_number%> • Sleeps: <%=boat.sleep_number%> • Bathrooms: <%=boat.bathroom_number%> • Decks: <%=boat.deck_number%> • Gallons per Hour: <%=boat.gallons_per_hour%> </p></div>
+            <!-- <div class="info"><p>Capacity: <%=boat.capacity%> • Length: <%=boat.length%>m • Rooms: <%=boat.room_number%> • Sleeps: <%=boat.sleep_number%> • Bathrooms: <%=boat.bathroom_number%> • Decks: <%=boat.deck_number%> • Gallons per Hour: <%=boat.gallons_per_hour%> </p></div> -->
           </div>
           <ul class="action_list">
             <li><%= link_to "More info", boat_path(boat), class: "btn"%></li>
@@ -31,10 +31,12 @@
     <% end %>
   </div>
 
+  <div class="map">
   <div
   id="map"
   style="width: 100%"
   data-markers="<%= @markers.to_json %>"
   data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
 ></div>
+  </div>
 </div>
