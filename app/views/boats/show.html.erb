@@ -1,57 +1,80 @@
+<!-- <div class="container-form">
+  <div class="row justify-content-center">
+    <div class="col-4 white-box-container">
+
+
 
 <div class="container">
-  <div class="outter">
+  <div class="row">
 
-    <div id="inner-left">
+    <div class="col-12 col-lg-8">
+    </div>
 
-      <div class="boat-card">
+    <div class="col-12 col-lg-4">
+    </div>
 
-        <ul>
-          <h1><%= @boat.name %></h1>
-          <p>Location: <strong><%= @boat.location %></strong></p>
-          <p>Capacity up to: <strong><%= @boat.capacity %> pers</strong></p>
-          <p>Sleeps: <strong><%= @boat.sleep_number %> pers</strong></p>
-          <p>Rooms: <strong><%= @boat.room_number %></strong></p>
-          <p>Bathrooms: <strong><%= @boat.bathroom_number %></strong></p>
-          <p>Decks: <strong><%= @boat.deck_number%></strong></p>
-          <p>Gallons/hour: <strong><%= @boat.gallons_per_hour%></strong></p>
-          <p>Price per day: <strong><%= @boat.price %>€</strong></p>
-          <p>Avarage Rating: <strong><%= @boat.avarage_rating %> stars</strong></p>
-          <p>Length: <strong><%= @boat.length %>m </strong></p>
-          <p>Description: <strong><%= @boat.description%></strong></p>
-        </ul>
+  </div>
+</div>
 
+
+-->
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 col-lg-8">
+     <div class="boat-container">
+      <div>
+        <% unless @boat.photo.nil? %>
+        <div class="photo"><%= cl_image_tag @boat.photo, height: 270, width: 250, crop: :fill %></div>
+        <% end %>
+        <h1><%= @boat.name %></h1>
+        <p>Location: <strong><%= @boat.location %></strong></p>
+        <p>Capacity up to: <strong><%= @boat.capacity %> pers</strong></p>
+        <p>Sleeps: <strong><%= @boat.sleep_number %> pers</strong></p>
+        <p>Rooms: <strong><%= @boat.room_number %></strong></p>
+        <p>Bathrooms: <strong><%= @boat.bathroom_number %></strong></p>
+        <p>Decks: <strong><%= @boat.deck_number%></strong></p>
+        <p>Gallons/hour: <strong><%= @boat.gallons_per_hour%></strong></p>
+        <p>Price per day: <strong><%= @boat.price %>€</strong></p>
+        <p>Avarage Rating: <strong><%= @boat.avarage_rating %> stars</strong></p>
+        <p>Length: <strong><%= @boat.length %>m </strong></p>
+        <p>Description: <strong><%= @boat.description%></strong></p>
         <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
       </div>
-    </div>
 
 
-    <div id="inner-right">
-
-      <div class="boat-card-two">
-        <h2>Book <%= @boat.name%></h2>
-        <%= simple_form_for([@boat, @booking]) do |f| %>
-        <div class="form-group">
-          <%= f.input :pickup_date, as: :string, label: "Start", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
-          <%= f.input :return_date, as: :string, label: "End", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
-
-          <div class="form-group">
-            <%= f.label :number_of_guests%>
-            <%= f.text_field :number_of_guests, class: 'form-control'%>
-          </div>
-
-          <br>
-          <%= f.button :submit, "Book now", class: "btn text-center", id: "booking_submit"%>
-          <% end %>
-          <br>
-        </div>
-
-
-      </div>
     </div>
   </div>
-  <!-- display price per day x days = Total-->
 
+
+
+  <div class="col-12 col-lg-4">
+    <div id="booking-form">
+
+      <h2>Book <%= @boat.name%></h2>
+      <%= simple_form_for([@boat, @booking]) do |f| %>
+      <div class="form-group">
+        <%= f.input :pickup_date, as: :string, label: "Start", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+        <%= f.input :return_date, as: :string, label: "End", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+
+        <div class="form-group">
+          <%= f.label :number_of_guests%>
+          <%= f.text_field :number_of_guests, class: 'form-control'%>
+        </div>
+
+        <br>
+        <%= f.button :submit, "Book now", class: "btn text-center", id: "booking_submit"%>
+        <% end %>
+        <br>
+      </div>
+
+    </div>
+  </div>
+
+
+</div>
+</div>
 
 
 
