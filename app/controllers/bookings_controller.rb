@@ -1,4 +1,12 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+  end
+
+  def show
+    @booking = Booking.find(params[:id])
+  end
+
   def new
     @boat = Boat.find(params[:boat_id])
     @booking = Booking.new
@@ -8,10 +16,11 @@ class BookingsController < ApplicationController
     @boat = Boat.find(params[:boat_id])
     @booking = Booking.new
     @booking.boat = @boat
-    if @booking.save
-      redirect_to dashboard_path(@booking.boat_id)
+    @booking.user = current_user
+    if @booking.save!
+      redirect_to dashboard_index_path
     else
-      render :new
+      render 'boats/show'
     end
   end
 
@@ -20,5 +29,4 @@ class BookingsController < ApplicationController
     @booking.destroy
     redirect_to dashboard_index_path
   end
-
 end
