@@ -3,7 +3,10 @@
     <h2>  </h2>
     <h2>  </h2>
     <h2>  </h2>
-    <h2>Available Boats:</h2>
+    <div class="header">
+      <div><h2>Available Boats:</h2></div>
+      <div><%= link_to "Add Boat", new_boat_path, class: "btn"%></div>
+    </div>
 
     <% @boats.each do |boat| %>
       <div class='boat-card'>
@@ -29,8 +32,6 @@
         </div>
       </div>
     <% end %>
-
-    <%= link_to "Add Boat", new_boat_path, class: "btn"%>
   </div>
 
   <div
