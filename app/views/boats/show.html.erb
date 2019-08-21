@@ -1,24 +1,3 @@
-<!-- <div class="container-form">
-  <div class="row justify-content-center">
-    <div class="col-4 white-box-container">
-
-
-
-<div class="container">
-  <div class="row">
-
-    <div class="col-12 col-lg-8">
-    </div>
-
-    <div class="col-12 col-lg-4">
-    </div>
-
-  </div>
-</div>
-
-
--->
-
 <div class="container">
   <div class="row">
 
@@ -42,8 +21,6 @@
         <p>Description: <strong><%= @boat.description%></strong></p>
         <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
       </div>
-
-
     </div>
   </div>
 
@@ -63,8 +40,14 @@
           <%= f.text_field :number_of_guests, class: 'form-control'%>
         </div>
 
+        <p>Capacity: <%= @boat.capacity %> </p>
+        <p>Pickup Location: <%= @boat.location %></p>
+        <p>Price per Day: <%= @boat.price %> $</p>
+        <% number_of_days = (@booking.pickup_date.to_i - @booking.return_date.to_i) %>
+        <% total_price = number_of_days * @boat.price %>
+        <p class="total">Total : <%= number_of_days%> days * <%= @boat.price%> $ = <%= total_price%> $</p>
         <br>
-        <%= f.button :submit, "Book now", class: "btn text-center", id: "booking_submit"%>
+        <%= f.button :submit, "Book now", class: "btn text-center"%>
         <% end %>
         <br>
       </div>

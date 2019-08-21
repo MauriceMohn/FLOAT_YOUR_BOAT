@@ -1,0 +1,42 @@
+  <h2></h2>
+  <h2></h2>
+  <h2></h2>
+  <h1>Your Dashboard:</h1>
+
+<% @bookings.each do |booking| %>
+  <div class="booking-card">
+    <h3>Your Booking for: <%=booking.boat.name%></h3>
+    <div class="boat-info">
+<!--       <p>Timing: <%= booking.pickup_date %> - <%= booking.return_date %> </p> -->
+      <p>Number of Guests: <em><%= booking.number_of_guests %></em> </p>
+      <p>Price per day: <em><%= booking.boat.price %>€</em></p>
+      <div class="details">
+        <p><strong>Details: </strong></p>
+        <div class="details-info">
+          <div class="details_">
+            <p>Location: <%= booking.boat.location %></p>
+            <p>Capacity up to: <%= booking.boat.capacity %> pers</p>
+            <p>Sleeps: <%= booking.boat.sleep_number %> pers</p>
+          </div>
+          <div class="details_">
+            <p>Rooms: <%= booking.boat.room_number %></p>
+            <p>Bathrooms: <%= booking.boat.bathroom_number %></p>
+            <p>Decks: <%= booking.boat.deck_number%></p>
+          </div>
+          <div class="details_">
+            <p>Gallons/hour: <%= booking.boat.gallons_per_hour%></p>
+            <p>Length: <%= booking.boat.length %>m </p>
+            <p>Description: <%= booking.boat.description%></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="action_list_">
+      <li><%= link_to "Remove", dashboard_index_path,
+          method: :delete,
+          data: { confirm: "Are you sure?" },
+          class: "btn" %></li>
+    </ul>
+  </div>
+<% end %>
+

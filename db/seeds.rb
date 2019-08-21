@@ -42,3 +42,5 @@ boat5.save
 boat6 = Boat.new(name:"Escape", boat_type: "Speed Boat", location: "Lake Garda, Italy", address: "Via Vo', 25015 Desenzano del Garda BS, Italy", price: 800, capacity: 6, length: 7.8, description:"Small speed boat perfect for lakes and small marinas.", room_number: 0, sleep_number: 0, bathroom_number: 0, deck_number: 1, gallons_per_hour: 3, user: user6)
 boat6.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566391352/Escape_ap1x6n.jpg"
 boat6.save
+
+# booking1 = Booking.create(user: user1, boat: boat1, pickup_date: Date.now, return_date: Date.tomorrow, number_of_guests: 2)
