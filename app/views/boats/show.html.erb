@@ -6,13 +6,15 @@
       <div class="boat-container-header">
         <div class="main-box">
           <div class="main-info">
-            <h2><%= @boat.name %></h2><br>
-            <div class="owner">
-              <div class="owner-pic">
-                <%= cl_image_tag @boat.user.photo,
+            <div class="title_user">
+              <h2><%= @boat.name %></h2><br>
+              <div class="owner">
+                <p><i class="far fa-user"></i> <%=@boat.user.name%></p>
+                <div class="owner-pic">
+                  <%= cl_image_tag @boat.user.photo,
                 width: 40, height: 40, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                </div>
               </div>
-              <p><i class="far fa-user"></i> <%=@boat.user.name%></p>
             </div>
             <p><i class="fas fa-map-marker-alt"></i> <strong><%= @boat.location %></strong></p>
             <p>Price per day: <strong><%= @boat.price %>€</strong></p>

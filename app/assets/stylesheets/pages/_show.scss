@@ -28,11 +28,6 @@
 }
 
 .details-infos{
-  // display: flex;
-  // background: #edeae4;
-  // border: 2px #edeae4;
-  // padding: 5px;
-  // margin-top: 10px;
   display: flex;
   background: #FCFDFF;
   border: groove 2px #3C87B2;
@@ -71,6 +66,14 @@
   margin-bottom: 10px;
 }
 
+.owner p{
+  padding-top: 7px;
+}
+
+.owner-pic{
+  margin-left: 15px;
+}
+
 .main-info h2{
   margin-bottom: 0;
   padding: 0;
@@ -80,4 +83,9 @@
   margin-top: 10px;
   display: flex;
   justify-content: flex-end;
+}
+
+.title_user{
+  display: flex;
+  justify-content: space-between;
 }
