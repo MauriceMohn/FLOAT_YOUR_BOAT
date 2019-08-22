@@ -4,6 +4,7 @@
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   margin: 0 auto;
   margin-bottom: 60px;
+  margin-top: 20px;
   padding: 10px;
   text-align: left;
   border-radius: 2px;
@@ -13,9 +14,38 @@
   line-height: 1.5;
 }
 
+// .top-card{
+//   padding-bottom: 20px;
+// }
+
+.bottom-card{
+  border-top: solid #D1D1CC 4px;
+  padding-top: 10px;
+  margin-top: 17px;
+}
+
+.confirmation{
+  font-size: 20px;
+  // border-bottom: solid #eaeaea 3px;
+  padding-bottom: 10px;
+}
+
+.middle-card{
+  display: flex;
+  justify-content: space-between;
+}
+
+.booking-info{
+  background-color: #D1D1CC;
+  color: white;
+  padding: 3px;
+  padding-left: 10px;
+}
+
 .details{
-  width: 680px;
+  width: 500px;
   margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .details-info{
@@ -23,6 +53,7 @@
   background: #FCFDFF;
   border: groove 2px #3C87B2;
   padding: 5px;
+  margin-top: 8px;
 }
 
 .details_{
@@ -31,9 +62,33 @@
   margin-right: 30px;
 }
 
+.details_ p {
+  margin: 0;
+}
+
 .action_list_{
   width: 800px;
+  list-style: none;
+  display: flex;
+  justify-content: end;
   padding: 0;
-  text-align: right;
   margin-bottom: 0;
+  margin-right: 0;
+  padding-left: 350px;
+}
+
+.dates{
+  width: 400px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.prices{
+  padding-right: 20px;
+}
+
+.TP{
+  border: 2px solid #AFAFAF;
+  border-radius: 2px;
+  padding: 5px;
 }
