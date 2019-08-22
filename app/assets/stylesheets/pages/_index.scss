@@ -6,7 +6,9 @@
 body{
   // background: #eee2dc;
   // background: #d1e8e2;
-  background: #F2FCF7;
+  // background: rgba(128, 179, 199, 0.2);
+  // background: rgba(226, 248, 250, 0.62);
+  background: white;
 }
 
 .index-container{
@@ -29,7 +31,7 @@ body{
 }
 
 .boat-card{
-  width: 600px;
+  width: 500px;
   background: white;
   box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
   margin: 0 auto;
@@ -44,14 +46,26 @@ body{
   line-height: 1;
 }
 
+.boat-card:hover{
+  background: #e0e0e0;
+  text-decoration: none;
+}
+
 .boat{
+  color: black;
   margin: 10px;
   margin-left: 20px;
   line-height: 1.5;
+  width: 100%;
 }
+
 
 .boat-info p{
   margin: 0;
+}
+
+.boat-info:hover{
+  text-decoration: none;
 }
 
 .info{
@@ -103,7 +117,8 @@ h3{
   border-radius: 3px;
   color: white;
   // background-color: #074684;
-  background-color: #387DA5;
+  // background-color: #387DA5;
+  background-color: #042f4b;
   border: #387DA5;
   padding: 5px;
   margin: 10px;
@@ -167,4 +182,11 @@ h3{
 
 .avatar_{
   text-align: right;
+}
+
+.navbar_button{
+  color: #696464;
+  text-decoration: none;
+  padding-right: 20px;
+  font-size: 18px;
 }
