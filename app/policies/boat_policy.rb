@@ -5,15 +5,34 @@ class BoatPolicy < ApplicationPolicy
     end
   end
 
+  def show?
+    true
+  end
+
   def create?
-    return false
+    true
+  end
+
+  def new?
+    true
+  end
+
+  def edit?
+    is_owner?
   end
 
   def update?
-    record.user == user
+    is_owner?
   end
 
   def destroy?
+    is_owner?
+  end
+
+  private
+
+  def is_owner?
     record.user == user
   end
+
 end

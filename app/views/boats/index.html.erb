@@ -2,8 +2,11 @@
   <div class="boat_index">
     <div class="header">
       <div><h2>Available Boats:</h2></div>
-      <div><%= link_to "Add Boat", new_boat_path, class: "btn"%></div>
-    </div>
+
+
+
+        <div><%= link_to "Add Boat", new_boat_path, class: "btn"%></div>
+        </div>
 
     <% @boats.each do |boat| %>
       <div class='boat-card'>
@@ -25,13 +28,22 @@
             <p>Price per day: <strong><%=boat.price%> $</strong></p>
             <!-- <div class="info"><p>Capacity: <%=boat.capacity%> • Length: <%=boat.length%>m • Rooms: <%=boat.room_number%> • Sleeps: <%=boat.sleep_number%> • Bathrooms: <%=boat.bathroom_number%> • Decks: <%=boat.deck_number%> • Gallons per Hour: <%=boat.gallons_per_hour%> </p></div> -->
           </div>
+
           <ul class="action_list">
             <li><%= link_to "More info", boat_path(boat), class: "btn"%></li>
-            <li><%= link_to "Edit", edit_boat_path(boat), class: "btn"%></li>
-            <li><%= link_to "Remove", boat_path(boat),
+
+            <% if policy(boat).edit? %>
+              <li><%= link_to "Edit", edit_boat_path(boat), class: "btn"%></li>
+            <% end %>
+
+            <% if policy(boat).destroy? %>
+              <li><%= link_to "Remove", boat_path(boat),
               method: :delete,
               data: { confirm: "Are you sure you want to delete this Boat?" },
               class: "btn" %></li>
+            <% end %>
+
+
           </ul>
         </div>
       </div>
