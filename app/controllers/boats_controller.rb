@@ -1,6 +1,9 @@
 class BoatsController < ApplicationController
   def index
     @boats = Boat.all
+    @boats = @boats.where('location ILIKE ?', "%#{params[:location].capitalize}%") if params[:location].present?
+    @boats = @boats.where('boat_type ILIKE ?', "%#{params[:boat_type].capitalize}%") if params[:boat_type].present?
+    @boats = @boats.where("sleep_number >= #{params[:sleep_number].to_i}") if params[:sleep_number].present?
     @boats_coordinates = Boat.geocoded
 
     @markers = @boats_coordinates.map do |boat|
