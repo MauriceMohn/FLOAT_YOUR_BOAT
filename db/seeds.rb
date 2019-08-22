@@ -49,8 +49,8 @@ boat1 = Boat.new(name:'The Explorer', boat_type: "Yacht", location: 'Palma de Ma
 boat1.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566391351/Explorer_wwrfo9.jpg"
 boat1.save
 
-boat2 = Boat.new(name:"Ocean Life", boat_type: "Yacht", location: "Hamburg, Germany", address: "Rüschwinkel 7A, 21129 Hamburg", price: 2000, capacity: 25, length: 28, description: "best boat ever", room_number: 4, sleep_number: 9, bathroom_number: 2, deck_number: 2, gallons_per_hour: 15, user: user2)
-boat2.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566391349/ocean_life_x0nvti.jpg"
+boat2 = Boat.new(name:"Ocean Life", boat_type: "Yacht", location: "Hamburg, Germany", address: "Rüschwinkel 7A, 21129 Hamburg", price: 2000, capacity: 25, length: 28, description: "This boat is amazing for birthday parties and weddings. Please be advised that cleaning costs will apply.", room_number: 4, sleep_number: 9, bathroom_number: 2, deck_number: 2, gallons_per_hour: 15, user: user7)
+boat2.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566490806/katie-manning-61XaXohAlZ4-unsplash_dybchh.jpg"
 boat2.save
 
 boat3 = Boat.new(name:"Santa Maria", boat_type: "Sail Boat", location: "Monacco", address: "Quai Louis II, 98000 Monaco", price: 1500, capacity: 12, length: 21, description: "medium sized sail boat perfect for day trips. Sailing license required.", room_number: 1, sleep_number: 2, bathroom_number: 1, deck_number: 1, gallons_per_hour: 6, user: user3)
