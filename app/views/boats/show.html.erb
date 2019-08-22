@@ -3,23 +3,51 @@
 
     <div class="col-12 col-lg-8">
      <div class="boat-container">
-      <div class="boat-container1">
-        <% unless @boat.photo.nil? %>
-        <div class="photo"><%= cl_image_tag @boat.photo, height: 270, width: 250, crop: :fill %></div>
-        <% end %>
-        <h1><%= @boat.name %></h1>
-        <p>Location: <strong><%= @boat.location %></strong></p>
-        <p>Capacity up to: <strong><%= @boat.capacity %> pers</strong></p>
-        <p>Sleeps: <strong><%= @boat.sleep_number %> pers</strong></p>
-        <p>Rooms: <strong><%= @boat.room_number %></strong></p>
-        <p>Bathrooms: <strong><%= @boat.bathroom_number %></strong></p>
-        <p>Decks: <strong><%= @boat.deck_number%></strong></p>
-        <p>Gallons/hour: <strong><%= @boat.gallons_per_hour%></strong></p>
-        <p>Price per day: <strong><%= @boat.price %>€</strong></p>
-        <p>Avarage Rating: <strong><%= @boat.avarage_rating %> stars</strong></p>
-        <p>Length: <strong><%= @boat.length %>m </strong></p>
+
+
+<div class="boat-container-header">
+  <div class="main-box">
+      <div class="main-info">
+        <h1><%= @boat.name %></h1><br>
+        <p>Location: <strong><%= @boat.location %></strong></p><br>
         <p>Description: <strong><%= @boat.description%></strong></p>
-        <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
+      </div>
+
+      <div class="owner-pic">
+        <%= cl_image_tag @boat.user.photo,
+      width: 40, height: 40, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <p><%=@boat.user.name%>
+      </div>
+    </div>
+
+        <div class="boat-photo">
+          <% unless @boat.photo.nil? %>
+          <div class="photo"><%= cl_image_tag @boat.photo, height: 250, width: 230, crop: :fill %></div>
+          <% end %>
+        </div>
+    </div>
+
+
+        <div class="details-box">
+           <p><strong>Details: </strong></p>
+        <div class="details-infos" class="justify-content-center">
+          <div class="details_">
+            <p>Capacity up to: <strong><%= @boat.capacity %> pers</strong></p>
+            <p>Sleeps: <strong><%= @boat.sleep_number %> pers</strong></p>
+            <p>Rooms: <strong><%= @boat.room_number %></strong></p>
+          </div>
+          <div class="details_">
+            <p>Bathrooms: <strong><%= @boat.bathroom_number %></strong></p>
+            <p>Decks: <strong><%= @boat.deck_number%></strong></p>
+            <p>Gallons/hour: <strong><%= @boat.gallons_per_hour%></strong></p>
+          </div>
+          <div class="details_">
+            <p>Price per day: <strong><%= @boat.price %>€</strong></p>
+            <p>Avarage Rating: <strong><%= @boat.avarage_rating %> stars</strong></p>
+            <p>Length: <strong><%= @boat.length %>m </strong></p>
+           </div>
+        </div>
+          <p><%= link_to "Back",  boats_path, class: 'btn btn-secondary'%></p>
       </div>
     </div>
   </div>
@@ -42,14 +70,14 @@
 
         <p>Capacity: <%= @boat.capacity %> </p>
         <p>Pickup Location: <%= @boat.location %></p>
-        <p>Price per Day: <%= @boat.price %> $</p>
-        <% number_of_days = (@booking.pickup_date.to_i - @booking.return_date.to_i) %>
-        <% total_price = number_of_days * @boat.price %>
-        <p class="total">Total : <%= number_of_days%> days * <%= @boat.price%> $ = <%= total_price%> $</p>
-        <br>
-        <%= f.button :submit, "Book now", class: "btn text-center"%>
+        <p id="ppd">Price per Day: <span id="pricee"><%= @boat.price %></span> $</p>
+        <p class="total">Total price: <span id="days_calculator"></span> days * <span id="pricee"><%=@boat.price%> $</span> = <span id="totalPrice"></span> $</p>
+
+        <div class=bb>
+          <%= f.button :submit, "Book now", class: "booking_btn"%>
+        </div>
         <% end %>
-        <br>
+
       </div>
 
     </div>

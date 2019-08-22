@@ -53,6 +53,7 @@ authorize @b
   end
 
   private
+
   def boat_params
     params.require(:boat).permit(:name, :location, :capacity, :price, :length, :description, :room_number, :sleep_number, :bathroom_number, :deck_number, :gallons_per_hour, :photo, :boat_type, :address)
   end

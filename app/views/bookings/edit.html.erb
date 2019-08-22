@@ -1,0 +1,27 @@
+<div id="booking-form">
+
+      <h2>Edit Booking for: <%= @booking.boat.name%></h2>
+      <%= simple_form_for([@booking.boat, @booking]) do |f| %>
+      <div class="form-group">
+        <%= f.input :pickup_date, as: :string, label: "Start", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+        <%= f.input :return_date, as: :string, label: "End", input_html: { class: "datepicker", value: Time.now.strftime('%m/%d/%Y') } %>
+
+        <div class="form-group">
+          <%= f.label :number_of_guests%>
+          <%= f.text_field :number_of_guests, class: 'form-control'%>
+        </div>
+
+        <p>Capacity: <%= @booking.boat.capacity %> </p>
+        <p>Pickup Location: <%= @booking.boat.location %></p>
+        <p>Price per Day: <%= @booking.boat.price %> $</p>
+        <% number_of_days = (@booking.pickup_date.to_i - @booking.return_date.to_i) %>
+        <% total_price = number_of_days * @booking.boat.price %>
+        <p class="total">Total : <%= number_of_days%> days * <%= @booking.boat.price%> $ = <%= total_price%> $</p>
+        <br>
+        <%= f.button :submit, "Update Booking", class: "btn text-center"%>
+        <% end %>
+        <br>
+      </div>
+      <p><%= link_to "Back",  dashboard_index_path, class: 'btn'%></p>
+
+    </div>
