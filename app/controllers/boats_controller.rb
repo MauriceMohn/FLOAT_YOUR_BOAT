@@ -1,4 +1,7 @@
 class BoatsController < ApplicationController
+
+authorize @b
+
   def index
     @boats = Boat.all
     @boats_coordinates = Boat.geocoded
@@ -39,7 +42,7 @@ class BoatsController < ApplicationController
   def update
     @boat = Boat.find(params[:id])
     @boat.update(boat_params)
-    # @boat.user = current_user
+    @boat.user = current_user
     redirect_to boats_path
   end
 
