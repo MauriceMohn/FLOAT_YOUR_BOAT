@@ -76,7 +76,8 @@
   padding: 0;
 }
 
-.back{
-  margin: 0;
-  text-align: right;
+.show-buttons{
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
 }
