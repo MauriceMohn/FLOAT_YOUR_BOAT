@@ -12,7 +12,14 @@
         <% end %>
         <div class='boat'>
           <div class='boat-info'>
-            <div class="header"><h3><%=boat.name%></h3> <p>Owner: <%=boat.user.name%></p></div>
+            <div class="header-boat">
+              <h3><%=boat.name%></h3>
+              <div>
+                <%= cl_image_tag boat.user.photo,
+                  width: 40, height: 40, gravity: :face, class: "avatar dropdown-toggle",id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                <p><%=boat.user.name%></p>
+              </div>
+            </div>
             <p>Type: <strong><%=boat.boat_type%></strong></p>
             <p>Pickup Location: <strong><%=boat.location%></strong></p>
             <p>Price per day: <strong><%=boat.price%> $</strong></p>

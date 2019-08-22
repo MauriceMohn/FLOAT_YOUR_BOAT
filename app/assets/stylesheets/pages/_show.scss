@@ -1,13 +1,14 @@
 
 
 .boat-container {
-  display: flex;
   background: white;
   padding: 20px;
   border-radius: 3px;
   margin-top: 66px;
-
+  align-content: stretch;
+  height: 100%;
 }
+
 
 #booking-form {
   // height: 500px;
@@ -22,6 +23,32 @@
 .total{
   border-top: dashed 1px black;
   padding-top: 20px
+}
+
+.details-infos{
+  display: flex;
+  background: #edeae4;
+  border: 2px #edeae4;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.details-box {
+  margin-top: 10px;
+}
+
+.owner-pic {
+display: flex;
+  width: 30%;
+}
+
+.boat-photo {
+  display: flex;
+}
+
+.boat-container-header {
+  display: flex;
+  justify-content: space-between;
 }
 
 .bb{
