@@ -14,7 +14,7 @@ user1 = User.new(name:"Peter", email:"peter@gmail.com", password:"Peterisawesome
 user1.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482494/peter_wbhhyx.jpg"
 user1.save
 
-user2 = User.new(name:"Meredith", email:"meredith@gmail.com", password:"Merdith")
+user2 = User.new(name:"Marie", email:"marie@gmail.com", password:"Marie1")
 user2.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/meredith_sb7baa.jpg"
 user2.save
 
