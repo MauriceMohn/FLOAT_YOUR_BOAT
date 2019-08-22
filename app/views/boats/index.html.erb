@@ -16,7 +16,7 @@
           <div class='boat-info'>
             <div class="header-boat">
               <h3><%=boat.name%></h3>
-              <div>
+              <div class="avatar_">
                 <%= cl_image_tag boat.user.photo,
                   width: 40, height: 40, gravity: :face, class: "avatar dropdown-toggle",id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                 <p><%=boat.user.name%></p>
