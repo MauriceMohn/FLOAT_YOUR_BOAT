@@ -1,44 +1,35 @@
 <div id="landing-page" class="banner">
-<h1>Float Your Boat</h1>
-
-
+  <div class="box-landing">
+  <div class="header-landing">
+  <p>Float Your Boat</p>
+  </div>
 
 
 <div class="container-form">
   <div class="row justify-content-center">
-    <div class="col-4 white-box-container">
+    <div class="white-box-container">
 
-
-<%= simple_form_for :search, url: boats_path do |f| %>
-<%= f.input :location, placeholder: 'Where to float your boat?' %>
-<%= f.input :boat_type, collection: ['Sail Boat', 'Yacht', 'Speed Boat', 'Kayak', 'House Boat', 'Canoe'] %>
- <%= f.input :sleep_number, :label => "People", placeholder: 'How many people?', collection: (1..20) %>
- <div class="row">
-   <div class="flexbox">
-    <div class='flex-setting'>
- <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker flex-setting"} %>
+  <%= form_tag boats_path, method: :get do %>
+  <div class="form-group">
+<%= text_field_tag :location, params[:location], class: "form-control", placeholder: 'Where to float your boat?' %>
+</div>
+  <div class="form-group">
+<%= select_tag(:boat_type, options_for_select(["Sail Boat", "Yacht", "Speed Boat", "Kayak", "House Boat"]), prompt: 'Boat Type', class: "form-control") %>
+</div>
+  <div class="form-group">
+ <%= text_field_tag :sleep_number, params[:sleep_number], class: "form-control", placeholder: 'How many people?' %>
  </div>
- <div class='flex-setting'>
-  <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker flex-setting"} %>
-  </div>
-  </div>
-  </div>
-<%= f.submit 'Search', class: "button-home" %>
+
+<%= submit_tag 'Get your boat', class: "button-home" %>
    <% end %>
+
 
          </div>
       </div>
     </div>
   </div>
+</div>
 
 
-
-<!-- <div class="container">
-  <div class="row justify-content-center">
-    <div class="col-6"> -->
-      <!-- <%#= "Lorem ipsum dolor sit amet, consectetur adipisicing elit " * 100 %> -->
- <!--    </div>
-  </div>
-</div> -->
 
 
