@@ -1,14 +1,66 @@
 <div class="form_container">
-  <h1> New Boat: </h1>
-
-  <%= simple_form_for(@boat) do |f| %>
-  <div class="form-group">
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control' %>
+  <div class="header">
+    <h1> Create a new Boat: </h1>
+    <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
   </div>
 
-  <div class="form-group">
-    <%= f.input :boat_type, collection: ["Yacht", "Sail Boat", "Kayak", "Speed Boat", "House Boat", "Canoe"], class: 'form-control'%>
+  <%= simple_form_for(@boat) do |f| %>
+  <div class="inline">
+    <div class="form-group">
+      <%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :boat_type, collection: ["Yacht", "Sail Boat", "Kayak", "Speed Boat", "House Boat", "Canoe"], class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :price%>
+      <%= f.text_field :price, class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :capacity, collection: (1..50), class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="inline">
+    <div class="form-group">
+      <%= f.label :location %>
+      <%= f.text_field :location, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :address %>
+      <%= f.text_field :address, class: 'form-control' %>
+    </div>
+
+     <div class="form-group">
+      <%= f.input :gallons_per_hour, collection: (5..200), class: 'form-control'%>
+     </div>
+
+     <div class="form-group">
+      <%= f.input :length, collection: (1..100), class: 'form-control'%>
+    </div>
+  </div>
+
+  <div class="inline">
+    <div class="form-group">
+      <%= f.input :deck_number, collection: (0..5), class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :room_number, collection: (0..20), class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :sleep_number, collection: (0..40), class: 'form-control'%>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :bathroom_number, collection: (0..10), class: 'form-control'%>
+     </div>
   </div>
 
   <div class="form-group">
@@ -17,61 +69,10 @@
   </div>
 
   <div class="form-group">
-    <%= f.label :location %>
-    <%= f.text_field :location, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :address %>
-    <%= f.text_field :address, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :price%>
-    <%= f.text_field :price, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :length%>
-    <%= f.text_field :length, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :capacity%>
-    <%= f.text_field :capacity, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :room_number%>
-    <%= f.text_field :room_number, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :sleep_number%>
-    <%= f.text_field :sleep_number, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :bathroom_number%>
-    <%= f.text_field :bathroom_number, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :deck_number%>
-    <%= f.text_field :deck_number, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :gallons_per_hour%>
-    <%= f.text_field :gallons_per_hour, class: 'form-control'%>
-  </div>
-
-  <div class="form-group">
     <%= f.input :photo %>
     <%= f.input :photo_cache, as: :hidden %>
   </div>
 
-    <%= f.submit %>
+    <%= f.button :submit, "Create Boat", class: 'btn' %>
   <% end %>
-  <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
 </div>
