@@ -8,16 +8,42 @@
 Boat.destroy_all
 User.destroy_all
 
-user1 = User.create(name:"Peter", email:"peter@gmail.com", password:"Peterisawesome")
-user2 = User.create(name:"Meredith", email:"meredith@gmail.com", password:"Merdith")
-user3 = User.create(name:"Derek", email:"derek@gmail.com", password:"Derek1")
-user4 = User.create(name:"Christina", email:"christina@gmail.com", password:"Christina")
-user5 = User.create(name:"George", email:"george@gmail.com", password:"George")
-user6 = User.create(name:"Isabella", email:"isabell@gmail.com", password:"Isabella")
-user7 = User.create(name:"Alex", email:"alex@gmail.com", password:"Alex111")
-user8 = User.create(name:"Miranda", email:"miranda@gmail.com", password:"Miranda")
-user9 = User.create(name:"Richard", email:"richard@gmail.com", password:"Richard")
-user10 = User.create(name:"Maggie", email:"maggie@gmail.com", password:"Maggie")
+ ##USERS
+
+user1 = User.new(name:"Peter", email:"peter@gmail.com", password:"Peterisawesome")
+user1.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482494/peter_wbhhyx.jpg"
+user1.save
+
+user2 = User.new(name:"Marie", email:"marie@gmail.com", password:"Marie1")
+user2.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/meredith_sb7baa.jpg"
+user2.save
+
+user3 = User.new(name:"Derek", email:"derek@gmail.com", password:"Derek1")
+user3.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/derek_nwegas.jpg"
+user3.save
+
+user4 = User.new(name:"Christina", email:"christina@gmail.com", password:"Christina")
+user4.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/christina_c8h7ii.jpg"
+user4.save
+
+user5 = User.new(name:"George", email:"george@gmail.com", password:"George")
+user5.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482492/george_cpgpgq.jpg"
+user5.save
+
+user6 = User.new(name:"Isabella", email:"isabell@gmail.com", password:"Isabella")
+user6.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/isabella_jhfthn.jpg"
+user6.save
+
+user7 = User.new(name:"Alex", email:"alex@gmail.com", password:"Alex111")
+user7.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/alex_typygl.jpg"
+user7.save
+
+user9 = User.new(name:"Maggie", email:"maggie@gmail.com", password:"Maggie")
+user9.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482494/maggie_zjxmew.jpg"
+user9.save
+
+
+##BOATS
 
 boat1 = Boat.new(name:'The Explorer', boat_type: "Yacht", location: 'Palma de Mallorca, Spain', address: 'Avinguda de Gabriel Roca, 07014 Palma, Illes Balears, Spain', price: 2500, capacity: 25, length: 28, description: "Medium sized yacht able to hold 25 people. Suited for celebrations & meetings. Available with a captain & crew. When rented without a captain, boat liscence required.", room_number: 3, sleep_number: 6, bathroom_number: 2, deck_number: 3, gallons_per_hour: 12, user: user1)
 boat1.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566391351/Explorer_wwrfo9.jpg"
@@ -42,5 +68,3 @@ boat5.save
 boat6 = Boat.new(name:"Escape", boat_type: "Speed Boat", location: "Lake Garda, Italy", address: "Via Vo', 25015 Desenzano del Garda BS, Italy", price: 800, capacity: 6, length: 7.8, description:"Small speed boat perfect for lakes and small marinas.", room_number: 0, sleep_number: 0, bathroom_number: 0, deck_number: 1, gallons_per_hour: 3, user: user6)
 boat6.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566391352/Escape_ap1x6n.jpg"
 boat6.save
-
-# booking1 = Booking.create(user: user1, boat: boat1, pickup_date: Date.now, return_date: Date.tomorrow, number_of_guests: 2)

@@ -1,12 +1,14 @@
 
+.container{
+  margin-top: 80px;
+}
 
 .boat-container {
   background: white;
   padding: 20px;
   border-radius: 3px;
-  margin-top: 66px;
   align-content: stretch;
-  height: 100%;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 
@@ -17,7 +19,7 @@
   background: white;
   padding: 20px;
   border-radius: 3px;
-  margin-top: 66px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
 }
 
 .total{
@@ -27,10 +29,10 @@
 
 .details-infos{
   display: flex;
-  background: #edeae4;
-  border: 2px #edeae4;
+  background: #FCFDFF;
+  border: groove 2px #3C87B2;
   padding: 5px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .details-box {
@@ -38,8 +40,7 @@
 }
 
 .owner-pic {
-display: flex;
-  width: 30%;
+  margin-right: 20px;
 }
 
 .boat-photo {
@@ -58,4 +59,33 @@ display: flex;
 .booking_btn{
   font-size: 25px;
   padding: 20px;
+}
+
+.owner{
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.owner p{
+  padding-top: 7px;
+}
+
+.owner-pic{
+  margin-left: 15px;
+}
+
+.main-info h2{
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.show-buttons{
+  margin-top: 10px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.title_user{
+  display: flex;
+  justify-content: space-between;
 }
