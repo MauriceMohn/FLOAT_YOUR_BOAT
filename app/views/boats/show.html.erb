@@ -12,7 +12,7 @@
                 <%= cl_image_tag @boat.user.photo,
                 width: 40, height: 40, gravity: :face, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
               </div>
-              <p>Owner: <%=@boat.user.name%></p>
+              <p><i class="far fa-user"></i> <%=@boat.user.name%></p>
             </div>
             <p><i class="fas fa-map-marker-alt"></i> <strong><%= @boat.location %></strong></p>
             <p>Price per day: <strong><%= @boat.price %>€</strong></p>
@@ -46,18 +46,20 @@
             <p>Length: <%= @boat.length %>m</p>
           </div>
         </div>
-          <p class="back"><%= link_to "Back",  boats_path, class: 'btn btn-secondary'%></p>
+        <div class=show-buttons>
+          <p><%= link_to "Back",  boats_path, class: 'btn btn-secondary'%></p>
 
           <% if policy(@boat).edit? %>
-              <p><%= link_to "Edit", edit_boat_path(@boat), class: "btn"%></p>
-            <% end %>
+            <p><%= link_to "Edit", edit_boat_path(@boat), class: "btn"%></p>
+          <% end %>
 
-            <% if policy(@boat).destroy? %>
-              <p><%= link_to "Remove", boat_path(@boat),
+          <% if policy(@boat).destroy? %>
+            <p><%= link_to "Remove", boat_path(@boat),
               method: :delete,
               data: { confirm: "Are you sure you want to delete this Boat?" },
               class: "btn" %></p>
-            <% end %>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
