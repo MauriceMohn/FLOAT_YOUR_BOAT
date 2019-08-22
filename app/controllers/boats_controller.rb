@@ -4,12 +4,12 @@ class BoatsController < ApplicationController
 
   def index
 
-    @boats = Boat.all
+    @boats = policy_scope(Boat)
     @boats = @boats.where('location ILIKE ?', "%#{params[:location].capitalize}%") if params[:location].present?
     @boats = @boats.where('boat_type ILIKE ?', "%#{params[:boat_type].capitalize}%") if params[:boat_type].present?
-    @boats = @boats.where("sleep_number >= #{params[:sleep_number].to_i}") if params[:sleep_number].present?
+    @boats = @boats.where("capacity >= #{params[:capacity].to_i}") if params[:capacity].present?
     @boats_coordinates = Boat.geocoded
-    @boats = policy_scope(Boat)
+
 
 
     @boats_coordinates = Boat.geocoded
