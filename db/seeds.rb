@@ -11,35 +11,35 @@ User.destroy_all
  ##USERS
 
 user1 = User.new(name:"Peter", email:"peter@gmail.com", password:"Peterisawesome")
-user1.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482494/peter_wbhhyx.jpg"
+user1.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482494/peter_wbhhyx.jpg"
 user1.save
 
 user2 = User.new(name:"Meredith", email:"meredith@gmail.com", password:"Merdith")
-user2.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482493/meredith_sb7baa.jpg"
+user2.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/meredith_sb7baa.jpg"
 user2.save
 
 user3 = User.new(name:"Derek", email:"derek@gmail.com", password:"Derek1")
-user3.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482493/derek_nwegas.jpg"
+user3.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/derek_nwegas.jpg"
 user3.save
 
 user4 = User.new(name:"Christina", email:"christina@gmail.com", password:"Christina")
-user4.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482493/christina_c8h7ii.jpg"
+user4.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/christina_c8h7ii.jpg"
 user4.save
 
 user5 = User.new(name:"George", email:"george@gmail.com", password:"George")
-user5.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482492/george_cpgpgq.jpg"
+user5.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482492/george_cpgpgq.jpg"
 user5.save
 
 user6 = User.new(name:"Isabella", email:"isabell@gmail.com", password:"Isabella")
-user6.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482493/isabella_jhfthn.jpg"
+user6.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/isabella_jhfthn.jpg"
 user6.save
 
 user7 = User.new(name:"Alex", email:"alex@gmail.com", password:"Alex111")
-user7.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482493/alex_typygl.jpg"
+user7.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482493/alex_typygl.jpg"
 user7.save
 
 user9 = User.new(name:"Maggie", email:"maggie@gmail.com", password:"Maggie")
-user9.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566482494/maggie_zjxmew.jpg"
+user9.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1566482494/maggie_zjxmew.jpg"
 user9.save
 
 
