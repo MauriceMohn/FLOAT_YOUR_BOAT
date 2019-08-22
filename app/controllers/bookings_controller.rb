@@ -4,6 +4,8 @@ class BookingsController < ApplicationController
   end
 
   def show
+    @booking = policy_scope(Boat)
+
     @booking = Booking.find(params[:id])
   end
 
