@@ -42,14 +42,14 @@
 
         <p>Capacity: <%= @boat.capacity %> </p>
         <p>Pickup Location: <%= @boat.location %></p>
-        <p>Price per Day: <%= @boat.price %> $</p>
-        <% number_of_days = (@booking.pickup_date.to_i - @booking.return_date.to_i) %>
-        <% total_price = number_of_days * @boat.price %>
-        <p class="total">Total : <%= number_of_days%> days * <%= @boat.price%> $ = <%= total_price%> $</p>
-        <br>
-        <%= f.button :submit, "Book now", class: "btn text-center"%>
+        <p id="ppd">Price per Day: <span id="pricee"><%= @boat.price %></span> $</p>
+        <p class="total">Total price: <span id="days_calculator"></span> days * <span id="pricee"><%=@boat.price%> $</span> = <span id="totalPrice"></span> $</p>
+
+        <div class=bb>
+          <%= f.button :submit, "Book now", class: "booking_btn"%>
+        </div>
         <% end %>
-        <br>
+
       </div>
 
     </div>
