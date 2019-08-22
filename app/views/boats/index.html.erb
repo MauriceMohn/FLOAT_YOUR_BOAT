@@ -1,13 +1,9 @@
 <div class="index-container">
   <div class="boat_index">
-    <div class="header">
-      <div><h2>Available Boats:</h2></div>
-        <div><%= link_to "Add Boat", new_boat_path, class: "btn"%></div>
-    </div>
-
     <div class="not-header">
       <div class="card_">
       <% @boats.each do |boat| %>
+      <%= link_to boat_path(boat) do %>
       <div class='boat-card'>
         <% unless boat.photo.nil? %>
           <div class="photo"><%= cl_image_tag boat.photo, height: 270, width: 250, crop: :fill %></div>
@@ -28,23 +24,9 @@
               <p><i class="fas fa-dollar-sign"></i> <%=boat.price%></p>
             </div>
           </div>
-
-          <ul class="action_list">
-            <li><%= link_to "More info", boat_path(boat), class: "btn"%></li>
-
-            <% if policy(boat).edit? %>
-              <li><%= link_to "Edit", edit_boat_path(boat), class: "btn"%></li>
-            <% end %>
-
-            <% if policy(boat).destroy? %>
-              <li><%= link_to "Remove", boat_path(boat),
-              method: :delete,
-              data: { confirm: "Are you sure you want to delete this Boat?" },
-              class: "btn" %></li>
-            <% end %>
-          </ul>
         </div>
       </div>
+      <% end %>
       <% end %>
     </div>
 

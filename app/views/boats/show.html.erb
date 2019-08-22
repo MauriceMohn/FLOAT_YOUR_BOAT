@@ -1,8 +1,9 @@
+<div class="overall">
+<div><p><%= link_to "Back",  boats_path, class: 'btn btn-secondary'%></p></div>
 <div class="container">
   <div class="row">
     <div class="col-12 col-lg-8">
      <div class="boat-container">
-
       <div class="boat-container-header">
         <div class="main-box">
           <div class="main-info">
@@ -49,8 +50,6 @@
           </div>
         </div>
         <div class=show-buttons>
-          <p><%= link_to "Back",  boats_path, class: 'btn btn-secondary'%></p>
-
           <% if policy(@boat).edit? %>
             <p><%= link_to "Edit", edit_boat_path(@boat), class: "btn"%></p>
           <% end %>
@@ -98,6 +97,7 @@
   </div>
 
 
+</div>
 </div>
 </div>
 
