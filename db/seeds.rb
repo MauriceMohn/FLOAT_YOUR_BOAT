@@ -85,7 +85,7 @@ boat10 = Boat.new(name:"Sandy", boat_type: "House Boat", location:"Amsterdam, Ne
 boat10.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566554103/tito-rebellious-TwV_DOMGt4k-unsplash_mtersq.jpg"
 boat10.save
 
-boat11 = Boat.new(name:"Chatharina", boat_type: "Speed Boat", location: "New York, USA", address:"2430 FDR Dr, New York, NY 10010, USA", price: 750, capacity: 14, length: 10, description: "Speed boat perfect for travelling up and down the Hudson. Boat liscence required. Life vests should be worn when on board.", room_number: 1, sleep_number: 0, bathroom_number: 0, deck_number: 1, gallons_per_hour: 8, user: user2)
+boat11 = Boat.new(name:"Chatharina", boat_type: "Speed Boat", location: "New York, USA", address:"2430 FDR Dr, New York, NY 10010, USA", price: 750, capacity: 14, length: 11, description: "Speed boat perfect for travelling up and down the Hudson. Boat liscence required. Life vests should be worn when on board.", room_number: 1, sleep_number: 0, bathroom_number: 0, deck_number: 1, gallons_per_hour: 8, user: user2)
 boat11.remote_photo_url = "https://res.cloudinary.com/mmohn/image/upload/v1566554307/shaah-shahidh-eG6C4nIvP0Y-unsplash_pijxtc.jpg"
 boat11.save
 
