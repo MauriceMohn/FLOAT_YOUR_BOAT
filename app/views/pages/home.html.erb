@@ -17,7 +17,7 @@
 <%= select_tag(:boat_type, options_for_select(["Sail Boat", "Yacht", "Speed Boat", "Kayak", "House Boat"]), prompt: 'Boat Type', class: "form-control") %>
 </div>
   <div class="form-group">
- <%= text_field_tag :sleep_number, params[:sleep_number], class: "form-control", placeholder: 'How many people?' %>
+ <%= text_field_tag :capacity, params[:capacity], class: "form-control", placeholder: 'How many people?' %>
  </div>
 
 <%= submit_tag 'Get your boat', class: "home-button" %>
