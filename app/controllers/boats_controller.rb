@@ -47,7 +47,7 @@ class BoatsController < ApplicationController
   def update
     @boat.update(boat_params)
     @boat.user = current_user
-    redirect_to boats_path
+    redirect_to boat_path(@boat)
   end
 
   def destroy
