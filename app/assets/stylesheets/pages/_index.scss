@@ -181,10 +181,19 @@ h3{
 }
 
 .navbar_button{
-  color: #696464;
+  color: #404247;
   text-decoration: none;
-  padding-right: 20px;
+  margin-right: 20px;
   font-size: 18px;
+  font-family: "Cormorant Garamond", serif;
+  background-color: rgba(255, 255, 255, 0.62);
+}
+
+.navbar_button:hover {
+  text-decoration: none;
+  color: #404247;
+  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .back{

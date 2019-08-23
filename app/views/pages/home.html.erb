@@ -20,14 +20,17 @@
  <%= text_field_tag :sleep_number, params[:sleep_number], class: "form-control", placeholder: 'How many people?' %>
  </div>
 
-<%= submit_tag 'Get your boat', class: "button-home" %>
+<%= submit_tag 'Get your boat', class: "home-button" %>
    <% end %>
-
 
          </div>
       </div>
     </div>
+    <br>
+     <div><%= link_to "See all Boats", boats_path, class: "home-link"%></div>
+
   </div>
+
 </div>
 
 
