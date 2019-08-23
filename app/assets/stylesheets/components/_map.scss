@@ -7,10 +7,33 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+.mapboxgl-popup-content p{
+  margin-bottom: 0;
+}
+
 .link{
-  color: red;
+  color: #0c2157;
+  font-size: 23px;
 }
 
 .link:hover{
   text-decoration: none;
 }
+
+// .photo-map {
+// position: absolute;
+// display: flex;
+// }
+
+// .info-text {
+// padding-left: 105px;
+// margin: 8px;
+// }
+
+// // .container1 {
+// //   width: 300px;
+// // }
+
+// .mapboxgl-popup-content {
+//   padding: 0 !important;
+// }
