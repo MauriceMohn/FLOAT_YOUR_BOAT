@@ -7,19 +7,18 @@
 <% @bookings.each do |booking| %>
   <div class="booking-card">
     <div class="top-card">
-      <h3>Your Booking for "<strong><%=booking.boat.name%></strong>" has bee confirmed!</h3>
+      <h3>Your Booking for "<strong><%=booking.boat.name%></strong>" has been confirmed!</h3>
       <% number_of_days = (booking.return_date.to_date - booking.pickup_date.to_date).to_i %>
       <p class="confirmation">Booked for<em><%=number_of_days%></em> days with<em><%=booking.number_of_guests%></em> guests. </p>
+      <div class="dates">
+            <h4>Pickup: <strong><%= booking.pickup_date.to_date.strftime("%b %d, %Y") %></strong></h4>
+            <h4>Return: <strong><%= booking.return_date.to_date.strftime("%b %d, %Y")%></strong></h4>
+      </div>
       <p class="booking-info"><strong>Your Booking Info</strong></p>
       <div class="middle-card">
         <div class="boat-info">
           <p>Booking Reference Number: <%= booking.id %></p>
           <p>Pickup Location: <%= booking.boat.location %></p>
-          <h4> </h4>
-          <div class="dates">
-            <p>Pickup: <strong><%= booking.pickup_date.to_date.strftime("%b %d, %Y") %></strong></p>
-            <p>Return: <strong><%= booking.return_date.to_date.strftime("%b %d, %Y")%></strong></p>
-          </div>
         </div>
         <div class="prices">
           <p>Price per day: <em><%= booking.boat.price %>€</em></p>
