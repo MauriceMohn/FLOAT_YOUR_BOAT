@@ -1,78 +1,80 @@
-<div class="form_container">
-  <div class="header">
-    <h1> Edit Boat: </h1>
-    <p><%= link_to "Back",  boats_path, class: 'btn'%></p>
+<div class=large_form_container>
+  <p class="back_"><%= link_to "Back",  boats_path, class: 'btn back'%></p>
+  <div class="form_container">
+    <div class="header">
+      <h1> Edit Your Boat: </h1>
+    </div>
+
+    <%= simple_form_for(@boat) do |f| %>
+    <div class="inline">
+      <div class="form-group">
+        <%= f.label :name %>
+        <%= f.text_field :name, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :boat_type, collection: ["Yacht", "Sail Boat", "Kayak", "Speed Boat", "House Boat", "Canoe"], class: 'form-control'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :price%>
+        <%= f.text_field :price, class: 'form-control'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :capacity, collection: (1..50), class: 'form-control'%>
+      </div>
+    </div>
+
+    <div class="inline">
+      <div class="form-group">
+        <%= f.label :location %>
+        <%= f.text_field :location, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.label :address %>
+        <%= f.text_field :address, class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :gallons_per_hour, collection: (5..200), class: 'form-control'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :length, collection: (1..100), class: 'form-control'%>
+      </div>
+    </div>
+
+    <div class="inline">
+      <div class="form-group">
+        <%= f.input :deck_number, collection: (0..5), class: 'form-control'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :room_number, collection: (0..20), class: 'form-control'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :sleep_number, collection: (0..40), class: 'form-control'%>
+      </div>
+
+      <div class="form-group">
+        <%= f.input :bathroom_number, collection: (0..10), class: 'form-control'%>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <%= f.label :description %>
+      <%= f.text_field :description, class: 'form-control' %>
+    </div>
+
+    <div class="form-group">
+      <%= f.input :photo %>
+      <%= f.input :photo_cache, as: :hidden %>
+    </div>
+
+      <%= f.button :submit, "Update Boat", class: 'create_btn' %>
+    <% end %>
   </div>
-
-  <%= simple_form_for(@boat) do |f| %>
-  <div class="inline">
-    <div class="form-group">
-      <%= f.label :name %>
-      <%= f.text_field :name, class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :boat_type, collection: ["Yacht", "Sail Boat", "Kayak", "Speed Boat", "House Boat", "Canoe"], class: 'form-control'%>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :price%>
-      <%= f.text_field :price, class: 'form-control'%>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :capacity, collection: (1..50), class: 'form-control'%>
-    </div>
-  </div>
-
-  <div class="inline">
-    <div class="form-group">
-      <%= f.label :location %>
-      <%= f.text_field :location, class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :address %>
-      <%= f.text_field :address, class: 'form-control' %>
-    </div>
-
-     <div class="form-group">
-      <%= f.input :gallons_per_hour, collection: (5..200), class: 'form-control'%>
-     </div>
-
-     <div class="form-group">
-      <%= f.input :length, collection: (1..100), class: 'form-control'%>
-    </div>
-  </div>
-
-  <div class="inline">
-    <div class="form-group">
-      <%= f.input :deck_number, collection: (0..5), class: 'form-control'%>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :room_number, collection: (0..20), class: 'form-control'%>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :sleep_number, collection: (0..40), class: 'form-control'%>
-    </div>
-
-    <div class="form-group">
-      <%= f.input :bathroom_number, collection: (0..10), class: 'form-control'%>
-     </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :description %>
-    <%= f.text_field :description, class: 'form-control' %>
-  </div>
-
-  <div class="form-group">
-    <%= f.input :photo %>
-    <%= f.input :photo_cache, as: :hidden %>
-  </div>
-
-    <%= f.button :submit, "Update Boat", class: 'btn' %>
-  <% end %>
 </div>
