@@ -13,10 +13,44 @@
   margin-left: -390px;
   margin-top: 156px;
   font-family: "Cormorant Garamond", serif;
+  font-size: 25px;
   font-size: xx-large;
 }
 
 .box-landing {
   position: absolute;
   left: -361px;
+}
+
+.home-link {
+  color: white;
+  margin-right: 383px;
+  font-size: 25px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.home-link:hover{
+  text-decoration: none;
+  color: white;
+  font-size: 28px;
+}
+
+.home-button {
+color: white;
+background-color: #575859;
+border-color: #575859;
+border-radius: 5px;
+font-family: "Cormorant Garamond", serif;
+padding: 8px;
+font-size: 18px;
+}
+
+.home-button:hover {
+color: white;
+background-color: #575859;
+border-color: #575859;
+border-radius: 5px;
+font-family: "Cormorant Garamond", serif;
+padding: 8px;
+font-size: 18px;
 }
