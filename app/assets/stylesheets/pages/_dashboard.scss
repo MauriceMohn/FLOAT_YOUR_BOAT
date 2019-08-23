@@ -18,9 +18,20 @@
   line-height: 1.5;
 }
 
-// .top-card{
-//   padding-bottom: 20px;
-// }
+.top-card p{
+  font-size: 18px;
+  font-family: "Proza Libre", sans-serif;
+}
+
+.top-card h3{
+  font-size: 35px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.top-card h4{
+  font-size: 27px;
+  font-family: "Cormorant Garamond", serif;
+}
 
 .bottom-card{
   border-top: solid #D1D1CC 4px;
@@ -29,9 +40,10 @@
 }
 
 .confirmation{
-  font-size: 20px;
-  // border-bottom: solid #eaeaea 3px;
+  font-size: 50px;
   padding-bottom: 10px;
+  font-family: "Proza Libre", sans-serif;
+  margin-bottom: 0;
 }
 
 .middle-card{
@@ -58,6 +70,7 @@
   border: groove 2px #3C87B2;
   padding: 5px;
   margin-top: 8px;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .details_{
@@ -69,6 +82,7 @@
 
 .details_ p {
   margin: 0;
+  font-family: "Proza Libre", sans-serif;
 }
 
 .action_list_{
@@ -83,9 +97,10 @@
 }
 
 .dates{
-  width: 400px;
+  width: 500px;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .prices{
