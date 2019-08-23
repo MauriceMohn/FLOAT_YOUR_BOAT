@@ -1,6 +1,7 @@
 .navbar-lewagon {
   justify-content: space-between;
   background-color: white;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14);
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -19,6 +20,7 @@
   justify-content: space-between;
   background-color: transparent;
   transition: 0.5s background-color ease;
+  box-shadow: 0 0 0 0;
 }
 
 .navbar-landing .navbar_button {
@@ -41,4 +43,26 @@ padding: 8px;
   color: #404247;
   font-family: "Cormorant Garamond", serif;
   font-size: 20px
+}
+
+.navbar_button{
+  color: #404247;
+  text-decoration: none;
+  margin-right: 20px;
+  margin-top: 10px;
+  font-size: 18px;
+  font-family: "Cormorant Garamond", serif;
+  background-color: rgba(255, 255, 255, 0.62);
+  padding: 3px;
+}
+
+.navbar_button:hover {
+  text-decoration: none;
+  color: #404247;
+  font-size: 20px;
+  font-family: "Cormorant Garamond", serif;
+}
+
+.dropdown-item{
+  font-family: "Cormorant Garamond", serif;
 }
