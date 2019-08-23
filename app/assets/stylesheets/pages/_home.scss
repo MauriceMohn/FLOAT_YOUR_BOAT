@@ -8,13 +8,17 @@
 //   font-family: "Dosis", sans-serif;
 // }
 
+.white-box-container{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+}
+
 .header-landing {
-  color: #403d36;
+  color: #042f4b;
   margin-left: -390px;
   margin-top: 156px;
   font-family: "Cormorant Garamond", serif;
-  font-size: 25px;
-  font-size: xx-large;
+  font-size: 40px;
+  // font-size: xx-large;
 }
 
 .box-landing {
@@ -27,6 +31,7 @@
   margin-right: 383px;
   font-size: 25px;
   font-family: "Cormorant Garamond", serif;
+  transition: font-size .2s ease;
 }
 
 .home-link:hover{
@@ -36,21 +41,17 @@
 }
 
 .home-button {
-color: white;
-background-color: #575859;
-border-color: #575859;
-border-radius: 5px;
-font-family: "Cormorant Garamond", serif;
-padding: 8px;
-font-size: 18px;
+  color: white;
+  background-color: #042f4b;
+  border-color: #575859;
+  border-radius: 3px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  font-family: "Cormorant Garamond", serif;
+  padding: 8px;
+  font-size: 20px;
+  transition: box-shadow .2s ease;
 }
 
 .home-button:hover {
-color: white;
-background-color: #575859;
-border-color: #575859;
-border-radius: 5px;
-font-family: "Cormorant Garamond", serif;
-padding: 8px;
-font-size: 18px;
+  box-shadow: 0 9px 9px 0 rgba(0,0,0,0.14), 0 8px 12px 0 rgba(0,0,0,0.12), 0 10px 8px -9px rgba(0,0,0,0.2);
 }

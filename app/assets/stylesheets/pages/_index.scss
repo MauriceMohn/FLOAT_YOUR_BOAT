@@ -45,7 +45,7 @@ body{
   box-shadow: 0 4px 4px 0 rgba(0,0,0,0.14), 0 3px 7px 0 rgba(0,0,0,0.12), 0 5px 3px -5px rgba(0,0,0,0.2);
   margin: 0 auto;
   margin-bottom: 60px;
-  padding: 5px 10px;
+  // padding: 5px 10px;
   text-align: left;
   border-radius: 2px;
   overflow: hidden;
@@ -61,10 +61,14 @@ body{
 
 .boat{
   color: black;
-  margin: 10px;
-  margin-left: 20px;
+  // margin: 10px;
+  margin-left: 15px;
   line-height: 1.5;
   width: 100%;
+}
+
+.boat-info{
+  padding: 10px;
 }
 
 .boat-info p{
@@ -111,6 +115,7 @@ h3{
   text-align: center;
   font-family: "Cormorant Garamond", serif;
   font-size: 18px;
+  transition: box-shadow .2s ease;
 }
 
 .btn:hover{
