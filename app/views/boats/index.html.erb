@@ -7,7 +7,7 @@
       <%= link_to boat_path(boat) do %>
       <div class='boat-card'>
         <% unless boat.photo.nil? %>
-          <div class="photo"><%= cl_image_tag boat.photo, height: 225, width: 180, crop: :fill %></div>
+          <div class="photo"><%= cl_image_tag boat.photo, height: 225, width: 200, crop: :fill %></div>
         <% end %>
         <div class='boat'>
           <div class='boat-info'>

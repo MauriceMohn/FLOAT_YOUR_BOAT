@@ -30,12 +30,12 @@
 }
 
 .home-button {
-color: white;
-background-color: #575859;
-border-color: #575859;
-border-radius: 5px;
-font-family: "Cormorant Garamond", serif;
-padding: 8px;
+  color: white;
+  background-color: #575859;
+  border-color: #575859;
+  border-radius: 5px;
+  font-family: "Cormorant Garamond", serif;
+  padding: 8px;
 }
 
 .navbar-landing .navbar_button:hover {
@@ -54,6 +54,7 @@ padding: 8px;
   font-family: "Cormorant Garamond", serif;
   background-color: rgba(255, 255, 255, 0.62);
   padding: 3px;
+  transition: font-size .2s ease;
 }
 
 .navbar_button:hover {
