@@ -1,6 +1,7 @@
 <div class="index-container">
   <div class="boat_index">
     <div class="not-header">
+      <% if @boats.present? %>
       <div class="card_">
       <% @boats.each do |boat| %>
       <%= link_to boat_path(boat) do %>
@@ -30,6 +31,18 @@
       <% end %>
       <% end %>
     </div>
+
+<% else %>
+  <h2></h2>
+  <h2></h2>
+  <h2></h2>
+  <h2></h2>
+  <div class="unavailability">
+  <p> No boats available here</p>
+  <%= link_to "Search again", root_path, class: 'btn'%>
+  <p > Or checkout other boats around the world <i class="fas fa-arrow-right"></i></p>
+  </div>
+<% end %>
 
   <div class="map">
   <div

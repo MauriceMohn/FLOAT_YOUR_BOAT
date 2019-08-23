@@ -52,6 +52,7 @@ body{
   display: flex;
   vertical-align: baseline;
   line-height: 1;
+  transition: box-shadow .2s ease;
 }
 
 .boat-card:hover{
@@ -202,3 +203,17 @@ h3{
 .forgot_pw:hover{
   color: black;
 }
+
+.unavailability{
+  font-size: 30px;
+  font-family: "Cormorant Garamond", serif;
+  padding-top: 170px;
+  padding-right: 160px;
+  text-align: center;
+}
+
+.unavailability .btn{
+  font-size: 22px;
+}
+
+
